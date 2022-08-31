@@ -14,7 +14,7 @@ public class Product {
     @Id
     @GeneratedValue
     @Column(name = "PRODUCT_ID", nullable = false)
-    int product_id;
+    Integer product_id;
 
     @Column(name = "NAME_PRODUCT", nullable = false)
     String name_product;

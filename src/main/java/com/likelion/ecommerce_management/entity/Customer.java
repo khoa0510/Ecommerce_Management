@@ -13,7 +13,7 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "CUSTOMER_ID", nullable = false)
-    int customer_id;
+    Integer customer_id;
 
     @Column(name = "CUSTOMER_NAME", nullable = false)
     String customer_name;
@@ -23,4 +23,7 @@ public class Customer {
 
     @Column(name = "PHONE_NO", nullable = false)
     String phone_no;
+
+    @Column(name = "CART_ID")
+    Integer cart_id;
 }

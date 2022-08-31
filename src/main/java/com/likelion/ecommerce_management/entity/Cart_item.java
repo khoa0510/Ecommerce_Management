@@ -1,6 +1,9 @@
 package com.likelion.ecommerce_management.entity;
 
+import com.likelion.ecommerce_management.model.Cart_item_id;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -11,17 +14,20 @@ import java.util.Date;
 @Table(name = "CART_ITEM")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@IdClass(Cart_item_id.class)
 public class Cart_item {
     @Id
     @Column(name = "CART_ID", nullable = false)
-    int cart_id;
+    Integer cart_id;
 
     @Id
     @Column(name = "PRODUCT_ID", nullable = false)
-    int product_id;
+    Integer product_id;
 
     @Column(name = "QUANTITY_WISHED", nullable = false)
-    int quantity_wished;
+    Integer quantity_wished;
 
     @Column(name = "DATE_ADDED", nullable = false)
     Date date_added;
